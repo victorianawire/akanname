@@ -11,7 +11,11 @@ Victoria Nawire
 ### Installing
 
 To view and install the app:
-Clone this repository or Download the .zip file
+https://victorianawire.github.io/akanname/
+
+Clone this repository or Download the .zip file:
+https://github.com/victorianawire/akanname.git
+
 ### Executing program
 Extract the files in the .zip file dowloaded  and then open the index.html file using a browser(preferably chrome)
 
