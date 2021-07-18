@@ -18,8 +18,8 @@ Extract the files in the .zip file dowloaded  and then open the index.html file 
 
 ## Help
 
-Any advise for common problems or issues.
-```
+For support you may contact me at victorianawirev@gmail.com
+
 
 
 ## Version History
