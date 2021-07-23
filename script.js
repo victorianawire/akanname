@@ -1,5 +1,5 @@
 var YY, CC, DD, MM, d, dayValue;
-var dayNames = ["0","Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", " Yaa", "Afua", "Ama"];
 
@@ -10,12 +10,12 @@ function validate() {
         document.myForm.year.focus();
         return false;
     } else if (document.myForm.month.value == "" || isNaN(document.myForm.month.value) ||
-        document.myForm.month.value.length != 2 || document.myForm.month.value > 12 || document.myForm.month.value <= 0) {
+        document.myForm.month.value.length != 2 || document.myForm.month.value > 12 || document.myForm.month.value <= 1) {
         alert("Please provide your month of birth! between 1 and 12");
         document.myForm.month.focus();
         return false;
     } else if (document.myForm.date.value == "" || isNaN(document.myForm.month.value) ||
-        document.myForm.month.value.length != 2 || document.myForm.date.value > 31 || document.myForm.date.value <= 0) {
+        document.myForm.month.value.length != 2 || document.myForm.date.value > 31 || document.myForm.date.value <= 1) {
        // alert("Please provide a valid date that you were born in!");
         document.myForm.day.focus();
         return false;
@@ -50,9 +50,9 @@ function getGender() {
     }
     switch (gender) {
         case "male":
-            if (dayValue == 1) {
+            if (dayValue == 0) {
                 alert("You were born on " + dayNames[0] + " and Your akan name is " + maleNames[0] + "!");
-            } else if (dayValue == 2) {
+            } else if (dayValue == 1) {
                 alert("You were born on " + dayNames[1] + " and Your akan name is " + maleNames[1] + "!");
             } else if (dayValue == 3) {
                 alert("You were born on " + dayNames[2] + " and Your akan name is " + maleNames[2] + "!");
