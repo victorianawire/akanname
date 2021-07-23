@@ -67,11 +67,11 @@ function getGender() {
             }
             break;
         case "female":
-            if (dayValue == 1) {
+            if (dayValue == 0) {
                 alert("You were born on " + dayNames[0] + " and Your akan name is " + maleNames[0] + "!");
             } else if (dayValue == 1) {
                 alert("You were born on " + dayNames[1] + " and Your akan name is " + maleNames[1] + "!");
-            } else if (dayValue == 2) {
+            } else if (dayValue ==2 ) {
                 alert("You were born on " + dayNames[2] + " and Your akan name is " + maleNames[2] + "!");
             } else if (dayValue == 3) {
                 alert("You were born on " + dayNames[3] + " and Your akan name is " + maleNames[3] + "!");
