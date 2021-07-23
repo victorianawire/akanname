@@ -5,8 +5,8 @@ var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", " Yaa", "Afua", "Ama"];
 
 function validate() {
     var genders = document.getElementsByName("gender");
-    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value > 1000 || document.myForm.year.value <= 2050) {
-        alert("Please provide a valid year of birth! eg 2019");
+    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value > 0001 || document.myForm.year.value <= 3000) {
+        alert("Please provide a valid year of birth");
         document.myForm.year.focus();
         return false;
     } else if (document.myForm.month.value == "" || isNaN(document.myForm.month.value) ||
