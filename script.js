@@ -1,11 +1,11 @@
 var YY, CC, DD, MM, d, dayValue;
-var dayNames = ["nil","Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", " Yaa", "Afua", "Ama"];
 
 function validate() {
     var genders = document.getElementsByName("gender");
-    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value > 2050 || document.myForm.year.value <= 0) {
+    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value < 2050 || document.myForm.year.value >= 0) {
         alert("Please provide a valid year of birth! eg 2019");
         document.myForm.year.focus();
         return false;
@@ -41,7 +41,7 @@ function calculateDayValue() {
 
 function getGender() {
     var genders = document.getElementsByName("gender");
-    if (genders[0].checked == true) {
+    if (genders[1].checked == true) {
         var gender = "male";
     } else if (genders[1].checked == true) {
         var gender = "female";
