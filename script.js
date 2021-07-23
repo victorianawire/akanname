@@ -1,11 +1,11 @@
 var YY, CC, DD, MM, d, dayValue;
-var dayNames = ["0", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", " Yaa", "Afua", "Ama"];
 
 function validate() {
     var genders = document.getElementsByName("gender");
-    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value > 1000 || document.myForm.year.value <= 2050) {
+    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value > 0000 || document.myForm.year.value <= 3000) {
         alert("Please provide a valid year of birth! eg 2019");
         document.myForm.year.focus();
         return false;
@@ -15,11 +15,11 @@ function validate() {
         document.myForm.month.focus();
         return false;
     } else if (document.myForm.date.value == "" || isNaN(document.myForm.month.value) ||
-        document.myForm.month.value.length != 2 || document.myForm.date.value > 31 || document.myForm.date.value <= 0) {
+        document.myForm.month.value.length != 2 || document.myForm.date.value <= 31 || document.myForm.date.value >= 0) {
         alert("Please provide a valid date that you were born in!");
         document.myForm.day.focus();
         return false;
-    } else if (genders[0].checked == false && genders[1].checked == false) {
+    } else if (genders[0].checked == false && genders[1].checked == true) {
         alert("You must select male or female");
         return false;
     } else {
@@ -62,7 +62,7 @@ function getGender() {
                 alert("You were born on " + dayNames[4] + " and Your akan name is " + maleNames[4] + "!");
             } else if (dayValue == 6) {
                 alert("You were born on " + dayNames[5] + " and Your akan name is " + maleNames[5] + "!");
-            } else if (dayValue == -0) {
+            } else if (dayValue == 0) {
                 alert("You were born on " + dayNames[6] + " and Your akan name is " + maleNames[6] + "!");
             }
             break;
