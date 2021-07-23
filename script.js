@@ -5,8 +5,8 @@ var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", " Yaa", "Afua", "Ama"];
 
 function validate() {
     var genders = document.getElementsByName("gender");
-    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value > 1000 || document.myForm.year.value <= 2050) {
-        alert("Please provide a valid year of birth! eg 2019");
+    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value > 0001 || document.myForm.year.value <= 3000) {
+        alert("Please provide a valid year of birth");
         document.myForm.year.focus();
         return false;
     } else if (document.myForm.month.value == "" || isNaN(document.myForm.month.value) ||
@@ -67,20 +67,20 @@ function getGender() {
             }
             break;
         case "female":
-            if (dayValue == 0) {
-                alert("You were born on " + dayNames[1] + " and Your akan name is " + maleNames[1] + "!");
-            } else if (dayValue == 1) {
-                alert("You were born on " + dayNames[2] + " and Your akan name is " + maleNames[2] + "!");
+            if (dayValue == 1) {
+                alert("You were born on " + dayNames[0] + " and Your akan name is  " + femaleNames[0] + "!");
             } else if (dayValue == 2) {
-                alert("You were born on " + dayNames[3] + " and Your akan name is " + maleNames[3] + "!");
+                alert("You were born on " + dayNames[1] + " and Your akan name is " + femaleNames[1] + "!");
             } else if (dayValue == 3) {
-                alert("You were born on " + dayNames[4] + " and Your akan name is " + maleNames[4] + "!");
+                alert("You were born on " + dayNames[2] + " and Your akan name is " + femaleNames[2] + "!");
             } else if (dayValue == 4) {
-                alert("You were born on " + dayNames[5] + " and Your akan name is " + maleNames[5] + "!");
+                alert("You were born on " + dayNames[3] + " and Your akan name is " + femaleNames[3] + "!");
             } else if (dayValue == 5) {
-                alert("You were born on " + dayNames[6] + " and Your akan name is " + maleNames[6] + "!");
+                alert("You were born on " + dayNames[4] + " and Your akan name is " + femaleNames[4] + "!");
             } else if (dayValue == 6) {
-                alert("You were born on " + dayNames[0] + " and Your akan name is " + maleNames[0] + "!");
+                alert("You were born on " + dayNames[5] + " and Your akan name is " + femaleNames[5] + "!");
+            } else if (dayValue == 0) {
+                alert("You were born on " + dayNames[6] + " and Your akan name is " + femaleNames[6] + "!");
             }
             break
         default:
