@@ -1,11 +1,11 @@
 var YY, CC, DD, MM, d, dayValue;
-var dayNames = ["0", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", " Yaa", "Afua", "Ama"];
 
 function validate() {
     var genders = document.getElementsByName("gender");
-    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value< 2050 || document.myForm.year.value >= 1800) {
+    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value < 2050 || document.myForm.year.value >= 1800) {
         alert("Please provide a valid year of birth! eg 2019");
         document.myForm.year.focus();
         return false;
